@@ -3,47 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kit Levante 4x4 Santiago | Suspensión Reforzada Off-Road | OKINNOVATION</title>
-    <meta name="description" content="🚀 Instalación profesional de kits de levante 4x4 en Santiago. Aumenta 2-6 pulgadas de altura. Toyota Hilux, Ford Ranger, Jeep Wrangler. Garantía y financiamiento.">
-    <meta name="keywords" content="kit levante 4x4 chile, suspensión levantada santiago, kit de levante toyota hilux, suspensión reforzada off-road, mantenimiento de suspensión de auto, taller de suspensión automotriz, reparacion de suspension de autos">
+    <meta name="description" content="OKINNOVATION Chile - Especialistas en fabricación de piezas metálicas personalizadas, suspensión 4x4 y accesorios off-road en Santiago. Llevamos la personalización a otro nivel.">
+    <meta name="keywords" content="okinnovation chile, 4x4 santiago, suspensión 4x4, accesorios off-road, fabricación piezas automotrices, kit levante, bumpers, rack techo, santiago chile, maipú, puente alto, la florida">
+    <title>OKINNOVATION Chile | Fabricación & Accesorios Off-Road | Personalización 4x4 Santiago</title>
     
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Instalación de Kits de Levante 4x4",
-        "description": "Instalación profesional de kits de levante para vehículos 4x4 en Santiago, Chile",
-        "provider": {
-            "@type": "AutoRepair",
-            "name": "OKINNOVATION Chile",
-            "telephone": "+56944571985"
-        },
-        "areaServed": "Santiago, Región Metropolitana",
-        "serviceType": "Kit de Levante 4x4"
-    }
-    </script>
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        /* Estilos específicos para landing de levante */
-        .levante-hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+        :root {
+            --primary: #e63946;
+            --primary-dark: #c1121f;
+            --secondary: #1d3557;
+            --accent: #fca311;
+            --light: #f1faee;
+            --dark: #1a1a1a;
+            --gray: #8d99ae;
+            --success: #2a9d8f;
         }
         
-        .levante-hero::before {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 0.5rem auto;
+        }
+        
+        /* Header & Navigation */
+        .navbar {
+            background-color: rgba(29, 53, 87, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: white !important;
+        }
+        
+        .navbar-brand span {
+            color: var(--primary);
+        }
+        
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--accent) !important;
+        }
+        
+        .navbar-nav .nav-link:after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            width: 0;
+            height: 2px;
             bottom: 0;
-            background: url('https://images.unsplash.com/photo-1544636331-e79b8c7d1ec8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
-            opacity: 0.3;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .navbar-nav .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 0.6rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(230, 57, 70, 0.3);
+        }
+        
+        .btn-outline-light {
+            border-width: 2px;
+            font-weight: 600;
+            padding: 0.6rem 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.9)), url('https://images.unsplash.com/photo-1565896314091-4c4c62b98c55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            color: white;
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
         }
         
         .hero-content {
@@ -51,469 +143,799 @@
             z-index: 2;
         }
         
-        .cta-levante {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: white;
-            padding: 20px 40px;
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
             font-size: 1.3rem;
-            font-weight: bold;
-            border-radius: 12px;
-            text-decoration: none;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-badge {
             display: inline-block;
-            margin: 20px 0;
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
-            transition: all 0.3s ease;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
         
-        .cta-levante:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+        .stats-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
         }
         
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .benefit-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        .stat-item {
             text-align: center;
-            border-left: 4px solid #f59e0b;
         }
         
-        .vehicle-selector {
-            background: #f8fafc;
-            border-radius: 12px;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            background: rgba(230, 57, 70, 0.1);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-features li:before {
+            content: '✓';
+            color: var(--success);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Categories Section */
+        .categories-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, #0d1b2a 100%);
+            color: white;
+        }
+        
+        .category-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .category-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .location-card {
+            background: var(--light);
+            border-radius: 10px;
             padding: 2rem;
-            margin: 3rem 0;
+            margin-top: 2rem;
         }
         
-        .selector-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, #0d1b2a 100%);
+            color: white;
+        }
+        
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo span {
+            color: var(--primary);
+        }
+        
+        .footer-links h5 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
         
-        .vehicle-option {
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .vehicle-option:hover {
-            border-color: #f59e0b;
-            transform: translateY(-2px);
-        }
-        
-        .vehicle-option.selected {
-            border-color: #f59e0b;
-            background: #fffbeb;
-        }
-        
-        .kit-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .kit-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 2px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-        
-        .kit-card:hover {
-            border-color: #f59e0b;
-            transform: translateY(-5px);
-        }
-        
-        .kit-card.popular {
-            border-color: #f59e0b;
-            position: relative;
-            background: linear-gradient(135deg, #fff, #fffbeb);
-        }
-        
-        .popular-badge {
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: #f59e0b;
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
+            transition: all 0.3s;
         }
         
-        .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1e3a8a;
-            margin: 1rem 0;
-        }
-        
-        .before-after {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .comparison-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 12px;
-        }
-        
-        .before {
-            background: #fef2f2;
-            border: 2px solid #fecaca;
-        }
-        
-        .after {
-            background: #f0fdf4;
-            border: 2px solid #bbf7d0;
-        }
-        
-        .form-cotizacion {
-            background: #1e3a8a;
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
             color: white;
-            padding: 3rem;
-            border-radius: 15px;
-            margin: 3rem 0;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* WhatsApp Flotante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
         }
         
         @media (max-width: 768px) {
-            .before-after {
-                grid-template-columns: 1fr;
+            .hero-section {
+                padding: 120px 0 80px;
             }
             
-            .selector-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .stats-container {
+                padding: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            
+            .btn-group {
+                display: flex;
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <section class="levante-hero">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <div class="hero-content">
-                <h1>🚀 <strong>KIT LEVANTE 4X4</strong> en Santiago</h1>
-                <p class="lead">Aumenta <strong>2-6 pulgadas de altura</strong> para tu off-road. Instalación profesional con garantía.</p>
-                
-                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 2rem 0;">
-                    <div class="row text-center">
-                        <div class="col-4">
-                            <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">+2-6"</div>
-                            <small>Altura Ganada</small>
-                        </div>
-                        <div class="col-4">
-                            <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">4H</div>
-                            <small>Instalación</small>
-                        </div>
-                        <div class="col-4">
-                            <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">12M</div>
-                            <small>Garantía</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="#cotizar" class="cta-levante">
-                    📞 COTIZAR MI KIT LEVANTE
-                </a>
-                <p style="color: #cbd5e1; font-size: 0.9rem;">Respuesta en 15 minutos • Asesoría gratuita</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFICIOS -->
-    <section class="section-light">
-        <div class="container">
-            <h2>¿Por qué instalar un <span style="color: #f59e0b;">Kit de Levante</span>?</h2>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛣️</div>
-                    <h4>Mejor Despeje</h4>
-                    <p>Supera obstáculos y terrenos difíciles sin dañar la parte inferior de tu vehículo</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚙</div>
-                    <h4>Neumáticos Más Grandes</h4>
-                    <p>Espacio para ruedas más grandes y agresivas que mejoran tracción</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
-                    <h4>Mejor Ángulo de Ataque</h4>
-                    <p>Sube pendientes pronunciadas sin raspar el paragolpes delantero</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
-                    <h4>Protección Extra</h4>
-                    <p>Mayor distancia al suelo protege componentes vitales de tu 4x4</p>
+            <a class="navbar-brand" href="#">OK<span>INNOVATION</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categorias">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <a href="https://wa.me/56944571985" class="btn btn-primary">
+                        <i class="fab fa-whatsapp me-2"></i> Cotizar Ahora
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- SELECTOR DE VEHÍCULO -->
-    <section class="section-dark">
+    <!-- Hero Section -->
+    <section class="hero-section" id="inicio">
         <div class="container">
-            <h2>Kits de Levante para <span style="color: #f59e0b;">Tu Vehículo</span></h2>
-            
-            <div class="vehicle-selector">
-                <h4>🚗 Selecciona tu vehículo:</h4>
-                <div class="selector-grid">
-                    <div class="vehicle-option" onclick="selectVehicle('hilux')">
-                        <div style="font-size: 2rem;">🚛</div>
-                        <h5>Toyota Hilux</h5>
-                        <small>Levante 2-4"</small>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <span class="hero-badge">Especialistas en 4x4 Chile</span>
+                    <h1 class="hero-title">Personalización <span class="text-accent">Extrema</span> para tu Vehículo Off-Road</h1>
+                    <p class="hero-subtitle">En OKINNOVATION Chile transformamos tu 4x4 con fabricación de piezas personalizadas, suspensión reforzada y accesorios off-road de alta calidad en Santiago y Región Metropolitana.</p>
                     
-                    <div class="vehicle-option" onclick="selectVehicle('ranger')">
-                        <div style="font-size: 2rem;">🚙</div>
-                        <h5>Ford Ranger</h5>
-                        <small>Levante 2-5"</small>
-                    </div>
-                    
-                    <div class="vehicle-option" onclick="selectVehicle('wrangler')">
-                        <div style="font-size: 2rem;">🧭</div>
-                        <h5>Jeep Wrangler</h5>
-                        <small>Levante 2-6"</small>
-                    </div>
-                    
-                    <div class="vehicle-option" onclick="selectVehicle('colorado')">
-                        <div style="font-size: 2rem;">🚘</div>
-                        <h5>Chevrolet Colorado</h5>
-                        <small>Levante 2-4"</small>
-                    </div>
-                    
-                    <div class="vehicle-option" onclick="selectVehicle('4runner')">
-                        <div style="font-size: 2rem;">🏔️</div>
-                        <h5>Toyota 4Runner</h5>
-                        <small>Levante 2-3"</small>
-                    </div>
-                    
-                    <div class="vehicle-option" onclick="selectVehicle('otro')">
-                        <div style="font-size: 2rem;">🔍</div>
-                        <h5>Otro Modelo</h5>
-                        <small>Consultar opciones</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- OPCIONES DE KITS -->
-    <section class="section-light">
-        <div class="container">
-            <h2>Niveles de <span style="color: #f59e0b;">Levante Disponibles</span></h2>
-            
-            <div class="kit-options">
-                <div class="kit-card">
-                    <h4>🥉 Kit Básico</h4>
-                    <p><strong>Levante 2 pulgadas</strong></p>
-                    <ul>
-                        <li>Espaciadores de suspensión</li>
-                        <li>Amortiguadores estándar</li>
-                        <li>Instalación básica</li>
-                        <li>Ideal para uso mixto</li>
-                    </ul>
-                    <div class="price">Desde $450.000</div>
-                    <a href="#cotizar" class="btn" style="background: #64748b;">Cotizar Básico</a>
-                </div>
-                
-                <div class="kit-card popular">
-                    <div class="popular-badge">MÁS POPULAR</div>
-                    <h4>🥈 Kit Performance</h4>
-                    <p><strong>Levante 3-4 pulgadas</strong></p>
-                    <ul>
-                        <li>Amortiguadores reforzados</li>
-                        <li>Barras de torsión</li>
-                        <li>Extensión de frenos</li>
-                        <li>Alineación profesional</li>
-                        <li>Garantía 12 meses</li>
-                    </ul>
-                    <div class="price">Desde $680.000</div>
-                    <a href="#cotizar" class="btn" style="background: #f59e0b;">Cotizar Performance</a>
-                </div>
-                
-                <div class="kit-card">
-                    <h4>🥇 Kit Extreme</h4>
-                    <p><strong>Levante 5-6 pulgadas</strong></p>
-                    <ul>
-                        <li>Suspensión completa</li>
-                        <li>Amortiguadores de competencia</li>
-                        <li>Modificación transmisión</li>
-                        <li>Instalación premium</li>
-                        <li>Garantía 18 meses</li>
-                        <li>Post-venta incluido</li>
-                    </ul>
-                    <div class="price">Desde $1.200.000</div>
-                    <a href="#cotizar" class="btn" style="background: #dc2626;">Cotizar Extreme</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ANTES/DESPUÉS -->
-    <section class="section-dark">
-        <div class="container">
-            <h2>Transformación <span style="color: #f59e0b;">Visual</span></h2>
-            
-            <div class="before-after">
-                <div class="comparison-card before">
-                    <h4>🚫 ANTES</h4>
-                    <div style="font-size: 4rem; margin: 1rem 0;">📏</div>
-                    <p><strong>Altura estándar</strong></p>
-                    <ul style="text-align: left;">
-                        <li>Despeje limitado</li>
-                        <li>Riesgo de daños</li>
-                        <li>Apariencia stock</li>
-                        <li>Rendimiento básico</li>
-                    </ul>
-                </div>
-                
-                <div class="comparison-card after">
-                    <h4>✅ DESPUÉS</h4>
-                    <div style="font-size: 4rem; margin: 1rem 0;">🚀</div>
-                    <p><strong>+4 pulgadas de altura</strong></p>
-                    <ul style="text-align: left;">
-                        <li>Máximo despeje</li>
-                        <li>Protección total</li>
-                        <li>Apariencia agresiva</li>
-                        <li>Alto rendimiento off-road</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO DE COTIZACIÓN -->
-    <section id="cotizar" class="section-light">
-        <div class="container">
-            <div class="form-cotizacion">
-                <h2>📞 Cotiza Tu Kit de Levante</h2>
-                <p>Completa el formulario y recibe tu cotización en 15 minutos</p>
-                
-                <form id="cotizacionLevante" style="margin-top: 2rem;">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <input type="text" class="form-control" placeholder="Tu Nombre" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <input type="tel" class="form-control" placeholder="+56 9 1234 5678" required>
+                    <div class="stats-container" data-aos="fade-up" data-aos-delay="200">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number">+8</div>
+                                    <div class="stat-label">Comunas Atendidas</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Personalizado</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <div class="stat-number">⚡</div>
+                                    <div class="stat-label">Instalación Rápida</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <select class="form-control" required>
-                                <option value="">Selecciona tu vehículo</option>
-                                <option>Toyota Hilux</option>
-                                <option>Ford Ranger</option>
-                                <option>Jeep Wrangler</option>
-                                <option>Chevrolet Colorado</option>
-                                <option>Toyota 4Runner</option>
-                                <option>Otro modelo</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <select class="form-control" required>
-                                <option value="">Nivel de levante deseado</option>
-                                <option>2 pulgadas - Básico</option>
-                                <option>3-4 pulgadas - Performance</option>
-                                <option>5-6 pulgadas - Extreme</option>
-                                <option>No estoy seguro - Asesoría</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <textarea class="form-control" rows="4" placeholder="¿Alguna necesidad específica? (neumáticos grandes, uso extremo, etc.)"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn" style="background: #f59e0b; color: white; padding: 15px 30px; font-size: 1.1rem;">
-                        🚀 COTIZAR AHORA
-                    </button>
-                    
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                        O escríbenos directo por WhatsApp: 
-                        <a href="https://wa.me/56944571985" style="color: #f59e0b; text-decoration: underline;">
-                            +56 9 4457 1985
+                    <div class="btn-group mt-4" role="group" data-aos="fade-up" data-aos-delay="300">
+                        <a href="https://wa.me/56944571985" class="btn btn-primary me-2">
+                            <i class="fab fa-whatsapp me-2"></i> Cotizar por WhatsApp
                         </a>
-                    </p>
-                </form>
+                        <a href="#servicios" class="btn btn-outline-light">
+                            <i class="fas fa-tools me-2"></i> Ver Servicios
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="400">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Vehículo 4x4 personalizado" class="img-fluid rounded shadow">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- GARANTÍA Y SEGUIMIENTO -->
-    <section class="section-dark">
-        <div class="container text-center">
-            <h2>🛡️ <span style="color: #f59e0b;">Garantía y Soporte</span> Post-Instalación</h2>
+    <!-- Services Section -->
+    <section class="services-section" id="servicios">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nuestros Servicios Especializados en Chile</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Suspensión 4x4 Reforzada</h3>
+                            <p>¿Tu 4x4 necesita más altura y mejor desempeño? Instalamos kits de levante, amortiguadores reforzados y mantenimiento completo de suspensión en Santiago y Región Metropolitana.</p>
+                            <ul class="service-features">
+                                <li>Kits de levante 1" a 6"</li>
+                                <li>Amortiguadores off-road reforzados</li>
+                                <li>Mantenimiento suspensión integral</li>
+                                <li>Regulación de altura profesional</li>
+                                <li>Reparación de ballestas y muelles</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-sm btn-outline-primary mt-3">Solicitar Información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Fabricación de Piezas Metálicas</h3>
+                            <p>En OkInnovation Chile fabricamos bumpers, cubre cárter, racks de techo y accesorios off-road con precisión milimétrica y materiales de alta resistencia para todo Chile.</p>
+                            <ul class="service-features">
+                                <li>Metalmecánica automotriz especializada</li>
+                                <li>Soldadura TIG/MIG profesional para 4x4</li>
+                                <li>Fabricación a medida de accesorios</li>
+                                <li>Piezas metálicas a pedido en Santiago</li>
+                                <li>Servicios de corte CNC precisos</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-sm btn-outline-primary mt-3">Solicitar Información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Protección de Bajos 4x4</h3>
+                            <p>Evita daños costosos con nuestras soluciones de protección inferior. Skid plates de acero, cubre cárter de aluminio y protectores de transmisión para terrenos chilenos.</p>
+                            <ul class="service-features">
+                                <li>Cubre cárter de aluminio de alta resistencia</li>
+                                <li>Skid plates para terrenos extremos</li>
+                                <li>Protección de bajos 4x4 completa</li>
+                                <li>Cubre diferencial blindado</li>
+                                <li>Protector de transmisión reforzado</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-sm btn-outline-primary mt-3">Solicitar Información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categorias">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Productos y Accesorios Off-Road Chile</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <h3 class="category-title">Kit de Levanté 4x4</h3>
+                        <p>Kits de 1" a 6" para todo tipo de 4x4 en Chile</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-car-crash"></i>
+                        </div>
+                        <h3 class="category-title">Bumpers y Parachoques</h3>
+                        <p>Delanteros, traseros y laterales personalizados</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3 class="category-title">Rack de Techo</h3>
+                        <p>Alta capacidad para aventuras off-road en Chile</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-footsteps"></i>
+                        </div>
+                        <h3 class="category-title">Pisaderas y Estribos</h3>
+                        <p>Acceso seguro y protección lateral reforzada</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h3 class="category-title">Protección de Bajos</h3>
+                        <p>Skid plates y cubre cárter para proteger tu 4x4</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="category-title">Sistemas de Seguridad</h3>
+                        <p>Bóvedas y sistemas antirrobo para 4x4 en Chile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="nosotros">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-start">Sobre <span class="text-primary">OKINNOVATION</span> Chile</h2>
+                    <p>En <strong class="text-primary">OKINNOVATION Chile</strong> somos especialistas en fabricación de piezas metálicas personalizadas para 4x4 en Santiago y Región Metropolitana. Aplicamos principios de <strong>Manufactura Lean</strong> para garantizar calidad, rapidez y cero desperdicio.</p>
+                    <p>Desarrollamos kits de levante para incrementar altura, paragolpes de acero delanteros y traseros, y protecciones inferiores como cubre cárter. Cada pieza está diseñada con enfoque técnico y mejora continua.</p>
+                    <p>Personalizamos tu vehículo con rack de techo, pisaderas reforzadas, bases para faros LED y porta bidones. Implementamos sistemas de seguridad con bóveda tranca pedales y accesorios funcionales.</p>
+                    <p>Si eres taller, empresa o usuario final que busca proveedor confiable de piezas metálicas en Chile, somos tu partner ideal en fabricación y personalización 4x4.</p>
+                    
+                    <div class="location-card" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="text-primary mb-3"><i class="fas fa-map-marker-alt me-2"></i> Comunas de Servicio en Región Metropolitana</h4>
+                        <p>Atendemos en las siguientes comunas de Santiago:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i> Maipú - Zona Poniente</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Puente Alto - Zona Sur</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> La Florida - Zona Suroriente</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Ñuñoa - Zona Oriente</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i> San Bernardo - Zona Sur</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Las Condes - Zona Nororiente</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Recoleta - Zona Norte</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Independencia - Zona Norte</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-primary fw-bold mt-3"><i class="fas fa-truck me-2"></i> Servicio a domicilio disponible en toda la Región Metropolitana</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Taller OKINNOVATION Chile" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contáctanos en Chile</h2>
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <p class="mb-4">¿Listo para transformar tu 4x4 en Chile? Contáctanos para cotizar accesorios personalizados, suspensión reforzada o fabricación de piezas a medida.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5>WhatsApp Chile</h5>
+                                <p>+56 9 4457 1985</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Ubicación</h5>
+                                <p>Región Metropolitana, Chile - Servicio en 8 comunas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5>Horario Chile</h5>
+                                <p>Lunes a Sábado 8:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://wa.me/56944571985" class="btn btn-primary btn-lg me-3">
+                            <i class="fab fa-whatsapp me-2"></i> Contactar por WhatsApp
+                        </a>
+                        <a href="tel:+56944571985" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-phone me-2"></i> Llamar Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1563720223485-8d84f13a82e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Contacto OKINNOVATION Chile" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-logo">OK<span>INNOVATION</span> CHILE</div>
+                    <p class="mb-3">Especialistas en fabricación de piezas metálicas personalizadas y accesorios off-road en Santiago, Chile. Manufactura Lean aplicada a la personalización 4x4.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/56944571985" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Servicios 4x4</h5>
+                        <ul>
+                            <li><a href="#servicios">Suspensión 4x4 Reforzada</a></li>
+                            <li><a href="#servicios">Fabricación de Piezas</a></li>
+                            <li><a href="#servicios">Protección de Bajos</a></li>
+                            <li><a href="#servicios">Accesorios Off-Road</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Productos Destacados</h5>
+                        <ul>
+                            <li><a href="#categorias">Kit de Levanté</a></li>
+                            <li><a href="#categorias">Bumpers y Parachoques</a></li>
+                            <li><a href="#categorias">Rack de Techo</a></li>
+                            <li><a href="#categorias">Pisaderas y Estribos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer-links">
+                        <h5>Contacto Chile</h5>
+                        <ul>
+                            <li><i class="fas fa-phone me-2"></i> +56 9 4457 1985</li>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Región Metropolitana</li>
+                            <li><i class="fas fa-clock me-2"></i> Lunes a Sábado 8:00-18:00</li>
+                        </ul>
+                        <div class="mt-3">
+                            <span class="badge bg-success">Servicio en 8 comunas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="row" style="margin-top: 2rem;">
-                <div class="col-md-4 mb-4">
-                    <div style="font-size: 3rem; color: #f59e0b;">📋</div>
-                    <h5>Garantía 12-18 Meses</h5>
-                    <p>Cobertura completa en componentes y mano de obra</p>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <div style="font-size: 3rem; color: #f59e0b;">🔧</div>
-                    <h5>Mantenimiento Incluido</h5>
-                    <p>Primera revisión de suspensión gratuita a los 3 meses</p>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <div style="font-size: 3rem; color: #f59e0b;">📞</div>
-                    <h5>Soporte 24/7</h5>
-                    <p>Asesoría técnica permanente después de la instalación</p>
-                </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2024 OKINNOVATION Chile - Fabricación & Accesorios Off-Road Santiago. Llevamos la personalización 4x4 a otro nivel con Manufactura Lean.</p>
             </div>
         </div>
-    </section>
+    </footer>
 
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/56944571985" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
-        function selectVehicle(vehicle) {
-            // Remover selección anterior
-            document.querySelectorAll('.vehicle-option').forEach(option => {
-                option.classList.remove('selected');
-            });
-            
-            // Agregar selección actual
-            event.currentTarget.classList.add('selected');
-            
-            // Aquí podrías actualizar el formulario con el vehículo seleccionado
-            console.log('Vehículo seleccionado:', vehicle);
-        }
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
         
-        // Form submission
-        document.getElementById('cotizacionLevante').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Aquí iría la lógica para enviar el formulario
-            alert('¡Cotización enviada! Te contactaremos en 15 minutos.');
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     </script>
-
 </body>
 </html>
