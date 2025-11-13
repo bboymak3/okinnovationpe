@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Levante 4x4 Santiago | Suspensión Reforzada Off-Road | OKINNOVATION</title>
+    <meta name="description" content="🚀 Instalación profesional de kits de levante 4x4 en Santiago. Aumenta 2-6 pulgadas de altura. Toyota Hilux, Ford Ranger, Jeep Wrangler. Garantía y financiamiento.">
+    <meta name="keywords" content="kit levante 4x4 chile, suspensión levantada santiago, kit de levante toyota hilux, suspensión reforzada off-road, mantenimiento de suspensión de auto, taller de suspensión automotriz, reparacion de suspension de autos">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Instalación de Kits de Levante 4x4",
+        "description": "Instalación profesional de kits de levante para vehículos 4x4 en Santiago, Chile",
+        "provider": {
+            "@type": "AutoRepair",
+            "name": "OKINNOVATION Chile",
+            "telephone": "+56944571985"
+        },
+        "areaServed": "Santiago, Región Metropolitana",
+        "serviceType": "Kit de Levante 4x4"
+    }
+    </script>
+
+    <style>
+        /* Estilos específicos para landing de levante */
+        .levante-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .levante-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1544636331-e79b8c7d1ec8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-levante {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 12px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-levante:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .vehicle-selector {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .selector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .vehicle-option {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .vehicle-option:hover {
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+        
+        .vehicle-option.selected {
+            border-color: #f59e0b;
+            background: #fffbeb;
+        }
+        
+        .kit-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .kit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .kit-card:hover {
+            border-color: #f59e0b;
+            transform: translateY(-5px);
+        }
+        
+        .kit-card.popular {
+            border-color: #f59e0b;
+            position: relative;
+            background: linear-gradient(135deg, #fff, #fffbeb);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #f59e0b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin: 1rem 0;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .comparison-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .before {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+        }
+        
+        .after {
+            background: #f0fdf4;
+            border: 2px solid #bbf7d0;
+        }
+        
+        .form-cotizacion {
+            background: #1e3a8a;
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .selector-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="levante-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🚀 <strong>KIT LEVANTE 4X4</strong> en Santiago</h1>
+                <p class="lead">Aumenta <strong>2-6 pulgadas de altura</strong> para tu off-road. Instalación profesional con garantía.</p>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 2rem 0;">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">+2-6"</div>
+                            <small>Altura Ganada</small>
+                        </div>
+                        <div class="col-4">
+                            <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">4H</div>
+                            <small>Instalación</small>
+                        </div>
+                        <div class="col-4">
+                            <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">12M</div>
+                            <small>Garantía</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#cotizar" class="cta-levante">
+                    📞 COTIZAR MI KIT LEVANTE
+                </a>
+                <p style="color: #cbd5e1; font-size: 0.9rem;">Respuesta en 15 minutos • Asesoría gratuita</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="section-light">
+        <div class="container">
+            <h2>¿Por qué instalar un <span style="color: #f59e0b;">Kit de Levante</span>?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛣️</div>
+                    <h4>Mejor Despeje</h4>
+                    <p>Supera obstáculos y terrenos difíciles sin dañar la parte inferior de tu vehículo</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚙</div>
+                    <h4>Neumáticos Más Grandes</h4>
+                    <p>Espacio para ruedas más grandes y agresivas que mejoran tracción</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                    <h4>Mejor Ángulo de Ataque</h4>
+                    <p>Sube pendientes pronunciadas sin raspar el paragolpes delantero</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+                    <h4>Protección Extra</h4>
+                    <p>Mayor distancia al suelo protege componentes vitales de tu 4x4</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTOR DE VEHÍCULO -->
+    <section class="section-dark">
+        <div class="container">
+            <h2>Kits de Levante para <span style="color: #f59e0b;">Tu Vehículo</span></h2>
+            
+            <div class="vehicle-selector">
+                <h4>🚗 Selecciona tu vehículo:</h4>
+                <div class="selector-grid">
+                    <div class="vehicle-option" onclick="selectVehicle('hilux')">
+                        <div style="font-size: 2rem;">🚛</div>
+                        <h5>Toyota Hilux</h5>
+                        <small>Levante 2-4"</small>
+                    </div>
+                    
+                    <div class="vehicle-option" onclick="selectVehicle('ranger')">
+                        <div style="font-size: 2rem;">🚙</div>
+                        <h5>Ford Ranger</h5>
+                        <small>Levante 2-5"</small>
+                    </div>
+                    
+                    <div class="vehicle-option" onclick="selectVehicle('wrangler')">
+                        <div style="font-size: 2rem;">🧭</div>
+                        <h5>Jeep Wrangler</h5>
+                        <small>Levante 2-6"</small>
+                    </div>
+                    
+                    <div class="vehicle-option" onclick="selectVehicle('colorado')">
+                        <div style="font-size: 2rem;">🚘</div>
+                        <h5>Chevrolet Colorado</h5>
+                        <small>Levante 2-4"</small>
+                    </div>
+                    
+                    <div class="vehicle-option" onclick="selectVehicle('4runner')">
+                        <div style="font-size: 2rem;">🏔️</div>
+                        <h5>Toyota 4Runner</h5>
+                        <small>Levante 2-3"</small>
+                    </div>
+                    
+                    <div class="vehicle-option" onclick="selectVehicle('otro')">
+                        <div style="font-size: 2rem;">🔍</div>
+                        <h5>Otro Modelo</h5>
+                        <small>Consultar opciones</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPCIONES DE KITS -->
+    <section class="section-light">
+        <div class="container">
+            <h2>Niveles de <span style="color: #f59e0b;">Levante Disponibles</span></h2>
+            
+            <div class="kit-options">
+                <div class="kit-card">
+                    <h4>🥉 Kit Básico</h4>
+                    <p><strong>Levante 2 pulgadas</strong></p>
+                    <ul>
+                        <li>Espaciadores de suspensión</li>
+                        <li>Amortiguadores estándar</li>
+                        <li>Instalación básica</li>
+                        <li>Ideal para uso mixto</li>
+                    </ul>
+                    <div class="price">Desde $450.000</div>
+                    <a href="#cotizar" class="btn" style="background: #64748b;">Cotizar Básico</a>
+                </div>
+                
+                <div class="kit-card popular">
+                    <div class="popular-badge">MÁS POPULAR</div>
+                    <h4>🥈 Kit Performance</h4>
+                    <p><strong>Levante 3-4 pulgadas</strong></p>
+                    <ul>
+                        <li>Amortiguadores reforzados</li>
+                        <li>Barras de torsión</li>
+                        <li>Extensión de frenos</li>
+                        <li>Alineación profesional</li>
+                        <li>Garantía 12 meses</li>
+                    </ul>
+                    <div class="price">Desde $680.000</div>
+                    <a href="#cotizar" class="btn" style="background: #f59e0b;">Cotizar Performance</a>
+                </div>
+                
+                <div class="kit-card">
+                    <h4>🥇 Kit Extreme</h4>
+                    <p><strong>Levante 5-6 pulgadas</strong></p>
+                    <ul>
+                        <li>Suspensión completa</li>
+                        <li>Amortiguadores de competencia</li>
+                        <li>Modificación transmisión</li>
+                        <li>Instalación premium</li>
+                        <li>Garantía 18 meses</li>
+                        <li>Post-venta incluido</li>
+                    </ul>
+                    <div class="price">Desde $1.200.000</div>
+                    <a href="#cotizar" class="btn" style="background: #dc2626;">Cotizar Extreme</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANTES/DESPUÉS -->
+    <section class="section-dark">
+        <div class="container">
+            <h2>Transformación <span style="color: #f59e0b;">Visual</span></h2>
+            
+            <div class="before-after">
+                <div class="comparison-card before">
+                    <h4>🚫 ANTES</h4>
+                    <div style="font-size: 4rem; margin: 1rem 0;">📏</div>
+                    <p><strong>Altura estándar</strong></p>
+                    <ul style="text-align: left;">
+                        <li>Despeje limitado</li>
+                        <li>Riesgo de daños</li>
+                        <li>Apariencia stock</li>
+                        <li>Rendimiento básico</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card after">
+                    <h4>✅ DESPUÉS</h4>
+                    <div style="font-size: 4rem; margin: 1rem 0;">🚀</div>
+                    <p><strong>+4 pulgadas de altura</strong></p>
+                    <ul style="text-align: left;">
+                        <li>Máximo despeje</li>
+                        <li>Protección total</li>
+                        <li>Apariencia agresiva</li>
+                        <li>Alto rendimiento off-road</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE COTIZACIÓN -->
+    <section id="cotizar" class="section-light">
+        <div class="container">
+            <div class="form-cotizacion">
+                <h2>📞 Cotiza Tu Kit de Levante</h2>
+                <p>Completa el formulario y recibe tu cotización en 15 minutos</p>
+                
+                <form id="cotizacionLevante" style="margin-top: 2rem;">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="tel" class="form-control" placeholder="+56 9 1234 5678" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <select class="form-control" required>
+                                <option value="">Selecciona tu vehículo</option>
+                                <option>Toyota Hilux</option>
+                                <option>Ford Ranger</option>
+                                <option>Jeep Wrangler</option>
+                                <option>Chevrolet Colorado</option>
+                                <option>Toyota 4Runner</option>
+                                <option>Otro modelo</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <select class="form-control" required>
+                                <option value="">Nivel de levante deseado</option>
+                                <option>2 pulgadas - Básico</option>
+                                <option>3-4 pulgadas - Performance</option>
+                                <option>5-6 pulgadas - Extreme</option>
+                                <option>No estoy seguro - Asesoría</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="4" placeholder="¿Alguna necesidad específica? (neumáticos grandes, uso extremo, etc.)"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="background: #f59e0b; color: white; padding: 15px 30px; font-size: 1.1rem;">
+                        🚀 COTIZAR AHORA
+                    </button>
+                    
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                        O escríbenos directo por WhatsApp: 
+                        <a href="https://wa.me/56944571985" style="color: #f59e0b; text-decoration: underline;">
+                            +56 9 4457 1985
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- GARANTÍA Y SEGUIMIENTO -->
+    <section class="section-dark">
+        <div class="container text-center">
+            <h2>🛡️ <span style="color: #f59e0b;">Garantía y Soporte</span> Post-Instalación</h2>
+            
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col-md-4 mb-4">
+                    <div style="font-size: 3rem; color: #f59e0b;">📋</div>
+                    <h5>Garantía 12-18 Meses</h5>
+                    <p>Cobertura completa en componentes y mano de obra</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div style="font-size: 3rem; color: #f59e0b;">🔧</div>
+                    <h5>Mantenimiento Incluido</h5>
+                    <p>Primera revisión de suspensión gratuita a los 3 meses</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div style="font-size: 3rem; color: #f59e0b;">📞</div>
+                    <h5>Soporte 24/7</h5>
+                    <p>Asesoría técnica permanente después de la instalación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function selectVehicle(vehicle) {
+            // Remover selección anterior
+            document.querySelectorAll('.vehicle-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Agregar selección actual
+            event.currentTarget.classList.add('selected');
+            
+            // Aquí podrías actualizar el formulario con el vehículo seleccionado
+            console.log('Vehículo seleccionado:', vehicle);
+        }
+        
+        // Form submission
+        document.getElementById('cotizacionLevante').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aquí iría la lógica para enviar el formulario
+            alert('¡Cotización enviada! Te contactaremos en 15 minutos.');
+        });
+    </script>
+
+</body>
+</html>
