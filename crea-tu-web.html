@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tu sitio provisional</title>
+    <style>
+        body{font-family:Arial,Helvetica,sans-serif;background:#0f0f0f;color:#eee;padding:40px}
+        .card{max-width:900px;margin:0 auto;background:#121212;padding:24px;border-radius:8px;border:1px solid #222}
+        a.btn{display:inline-block;background:#1ea7ff;color:#002;padding:10px 14px;border-radius:6px;text-decoration:none;margin-top:12px}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 id="title">Sitio provisional</h1>
+        <p id="desc">Este es un sitio de ejemplo creado desde el flujo rápido de "Crear tu web". Más tarde puedes editarlo o solicitar soporte por WhatsApp.</p>
+        <div id="info"></div>
+        <a href="/" class="btn">Volver al sitio</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const site = params.get('site') || 'mi-sitio';
+        const tpl = params.get('tpl') || 'template-1';
+        document.getElementById('title').textContent = site.replace(/-/g,' ').toUpperCase();
+        document.getElementById('info').innerHTML = '<p>Plantilla: <strong>' + tpl + '</strong></p>';
+    </script>
+</body>
+</html>

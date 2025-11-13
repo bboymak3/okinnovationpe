@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OKINNOVATION - Especialistas en fabricación de piezas metálicas personalizadas, suspensión 4x4 y accesorios off-road en Lima, Perú. Llevamos la personalización a otro nivel.">
+    <title>OKINNOVATION Perú | Fabricación & Accesorios Off-Road | Personalización 4x4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <style>
+        :root {
+            --primary: #e63946;
+            --primary-dark: #d62839;
+            --secondary: #000000;
+            --light: #1a1a1a;
+            --white: #ffffff;
+            --accent: #f39c12;
+            --success: #e63946;
+            --text-light: #ffffff;
+            --text-dark: #000000;
+            --card-bg: #2d2d2d;
+        }
+        
+        body {
+            font-family: 'Inter Tight', sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background-color: var(--secondary);
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* ELIMINADO: Todos los estilos del menú viejo */
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 0.5rem auto;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        p {
+            color: var(--text-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Hero section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, #2a0a0a 100%);
+            color: white;
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #333;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1565896314091-4c4c62b98c55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            opacity: 0.2;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: var(--text-light);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Secciones */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-light {
+            background-color: var(--light);
+            border-bottom: 1px solid #333;
+        }
+        
+        .section-dark {
+            background-color: var(--secondary);
+            color: var(--white);
+            border-bottom: 1px solid #333;
+        }
+        
+        .section-dark h2:after {
+            background: var(--primary);
+        }
+        
+        /* Servicios Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            position: relative;
+            border: 1px solid #444;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            border-color: var(--primary);
+        }
+        
+        .service-icon {
+            background: var(--primary);
+            color: var(--white);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .service-content p {
+            color: #ccc;
+        }
+        
+        .service-content ul {
+            list-style-position: inside;
+            margin-top: 1rem;
+        }
+        
+        .service-content li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+            color: #ccc;
+        }
+        
+        .service-content li:before {
+            content: '►';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Categorías */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .category-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-light);
+            text-decoration: none;
+            border: 1px solid #444;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            color: var(--text-light);
+            text-decoration: none;
+            border-color: var(--primary);
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .category-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .category-card p {
+            color: #ccc;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+            border-top: 1px solid #333;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+        }
+        
+        /* WhatsApp Flotante */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Badge */
+        .badge-custom {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 120px 0 80px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .services-grid, .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    </style>
+</head>
+<body itemscope itemtype="https://schema.org/AutoRepair">
+
+    <!-- SCHEMA MARKUP PARA TALLER MECÁNICO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "OKINNOVATION",
+        "description": "Especialistas en fabricación de piezas metálicas personalizadas, suspensión 4x4 y accesorios off-road en Lima, Perú",
+        "url": "https://okinnovation.com",
+        "telephone": "+51918286293",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lima",
+            "addressRegion": "Lima",
+            "addressCountry": "PE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-12.046374",
+            "longitude": "-77.042793"
+        },
+        "openingHours": "Mo-Sa 08:00-18:00",
+        "serviceType": ["Suspensión 4x4", "Fabricación de piezas", "Accesorios Off-Road", "Kit de Levanté"],
+        "areaServed": ["Ancón", "Carabayllo", "Comas", "Independencia", "Los Olivos", "Puente Piedra", "San Martín de Porres", "Santa Rosa"],
+        "sameAs": ["https://wa.me/51918286293"]
+    }
+    </script>
+
+    <!-- ========== ELIMINADO: Todo el código del menú viejo ========== -->
+    <!-- ELIMINADO: <nav class="main-nav"> hasta todo el JavaScript del menú -->
+    
+    <!-- ========== MENÚ SE CARGARÁ AUTOMÁTICAMENTE AQUÍ ========== -->
+    <!-- El menú nuevo se insertará automáticamente por load-menu.js -->
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="inicio">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="animate__animated animate__fadeInUp">
+                    <span style="color: #e63946;">OKINNOVATION</span> 🟢<br>
+                    <small class="fs-4" style="color: white;">[ 🚘 Fabricación & Accesorios Off-Road ]</small><br>
+                    <span class="d-block mt-3" style="color: white;">LLEVAMOS LA PERSONALIZACIÓN A OTRO NIVEL 4x4⚙️</span>
+                </h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                    Especialistas en fabricación de piezas metálicas personalizadas, suspensión 4x4 y accesorios off-road en Lima, Perú
+                </p>
+                
+                <div class="row mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="col-4 text-center">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #e63946;">+8</div>
+                        <small style="color: #ccc;">Distritos Atendidos</small>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #e63946;">100%</div>
+                        <small style="color: #ccc;">Personalizado</small>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #e63946;">⚡</div>
+                        <small style="color: #ccc;">Instalación Rápida</small>
+                    </div>
+                </div>
+                
+                <div class="animate__animated animate__fadeInUp animate__delay-3s">
+                    <a href="https://wa.me/51918286293" class="btn me-3 mb-3">
+                        🚀 Cotizar Ahora
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary mb-3">
+                        🔧 Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- SERVICIOS -->
+    <section class="section-light" id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios Especializados</h2>
+            <div class="services-grid">
+                <div class="service-card" id="suspension">
+                    <div class="service-icon">⚙️</div>
+                    <div class="service-content">
+                        <h3>Suspensión 4x4</h3>
+                        <p>Servicio integral de suspensión 4x4. Instalación, reparación y venta de amortiguadores reforzados y kits de suspensión.</p>
+                        <ul>
+                            <li>Suspensión reforzada</li>
+                            <li>Amortiguadores off-road</li>
+                            <li>Mantención suspensión</li>
+                            <li>Regulación de altura</li>
+                            <li>Reparación de ballestas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card" id="fabricacion">
+                    <div class="service-icon">🔧</div>
+                    <div class="service-content">
+                        <h3>Fabricación de Piezas</h3>
+                        <p>Desarrollamos y soldamos accesorios 4x4, soportes y refuerzos especiales a medida.</p>
+                        <ul>
+                            <li>Metalmecánica automotriz</li>
+                            <li>Soldadura TIG/MIG para 4x4</li>
+                            <li>Fabricación a medida de accesorios</li>
+                            <li>Piezas metálicas a pedido</li>
+                            <li>Servicios de corte CNC</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card" id="proteccion">
+                    <div class="service-icon">🛡️</div>
+                    <div class="service-content">
+                        <h3>Protección de Bajos</h3>
+                        <p>Instalación de cubre cárter y protección para diferenciales en acero y aluminio de alto impacto.</p>
+                        <ul>
+                            <li>Cubre cárter de aluminio</li>
+                            <li>Skid plate</li>
+                            <li>Protección de bajos 4x4</li>
+                            <li>Cubre diferencial</li>
+                            <li>Protector de transmisión</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS DE PRODUCTOS -->
+    <section class="section-dark" id="productos">
+        <div class="container">
+            <h2>Categorías de Productos</h2>
+            <div class="categories">
+                <a href="#kit-levante" class="category-card">
+                    <div class="category-icon">⬆️</div>
+                    <h3>Kit de Levanté</h3>
+                    <p>Gana la altura que necesitas para tu 4x4</p>
+                </a>
+                <a href="#bumpers" class="category-card">
+                    <div class="category-icon">💥</div>
+                    <h3>Bumpers y Parachoques</h3>
+                    <p>Protección máxima con diseño personalizado</p>
+                </a>
+                <a href="#rack-techo" class="category-card">
+                    <div class="category-icon">🏕️</div>
+                    <h3>Rack de Techo</h3>
+                    <p>Alta capacidad para tus aventuras off-road</p>
+                </a>
+                <a href="#pisaderas" class="category-card">
+                    <div class="category-icon">🪜</div>
+                    <h3>Pisaderas y Estribos</h3>
+                    <p>Acceso seguro y protección lateral</p>
+                </a>
+                <a href="#proteccion-bajos" class="category-card">
+                    <div class="category-icon">🛡️</div>
+                    <h3>Protección de Bajos</h3>
+                    <p>Skid plates y cubre cárter</p>
+                </a>
+                <a href="#seguridad" class="category-card">
+                    <div class="category-icon">🔒</div>
+                    <h3>Seguridad</h3>
+                    <p>Bóvedas y sistemas antirrobo</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section-light" id="nosotros">
+        <div class="container">
+            <h2>Sobre OKINNOVATION</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p>En <strong style="color: #e63946;">OKINNOVATION</strong> somos especialistas en fabricación de piezas metálicas personalizadas para 4x4. Desarrollamos kits de levante para incrementar altura, paragolpes de acero delanteros y traseros, y protecciones inferiores como cubre cárter.</p>
+                    <p>Personalizamos tu vehículo con rack de techo, pisaderas reforzadas, bases para faros y porta bidones. Implementamos sistemas de seguridad con bóveda tranca pedales.</p>
+                    <p>Realizamos reparaciones integrales y mantenimiento completo para dejar tu 4x4 preparado para cualquier terreno.</p>
+                    <p>Contamos con amplia experiencia en sistemas de suspensión y componentes de protección off-road.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div style="background: #2d2d2d; border: 1px solid #444; padding: 2rem; border-radius: 8px;">
+                        <h4 style="color: #e63946;">📍 Zonas de Servicio</h4>
+                        <p style="color: #ccc;">Atendemos en los siguientes distritos de Lima:</p>
+                        <ul style="color: #ccc;">
+                            <li>Ancón</li>
+                            <li>Carabayllo</li>
+                            <li>Comas</li>
+                            <li>Independencia</li>
+                            <li>Los Olivos</li>
+                            <li>Puente Piedra</li>
+                            <li>San Martín de Porres</li>
+                            <li>Santa Rosa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section-dark" id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p>¿Listo para personalizar tu 4x4? Contáctanos para obtener más información sobre nuestros servicios y cotizaciones.</p>
+                    <p><strong>📞 Teléfono:</strong> +51 918 286 293</p>
+                    <p><strong>📍 Ubicación:</strong> Lima, Perú - Atendemos en 8 distritos</p>
+                    <p><strong>🕒 Horario:</strong> Lunes a Sábado 8:00 AM - 6:00 PM</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="https://wa.me/51918286293" class="btn btn-light btn-lg">
+                        📱 WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>OKINNOVATION</h3>
+                    <p style="color: #ccc;">Especialistas en fabricación de piezas metálicas personalizadas y accesorios off-road en Lima, Perú.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://wa.me/51918286293" class="btn btn-success btn-sm">WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#suspension">Suspensión 4x4</a></li>
+                        <li><a href="#fabricacion">Fabricación de Piezas</a></li>
+                        <li><a href="#proteccion">Protección de Bajos</a></li>
+                        <li><a href="#accesorios">Accesorios Off-Road</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="#kit-levante">Kit de Levanté</a></li>
+                        <li><a href="#bumpers">Bumpers y Parachoques</a></li>
+                        <li><a href="#rack-techo">Rack de Techo</a></li>
+                        <li><a href="#pisaderas">Pisaderas y Estribos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p style="color: #ccc;">📞 +51 918 286 293</p>
+                    <p style="color: #ccc;">📍 Lima, Perú</p>
+                    <p style="color: #ccc;">🕒 Lunes a Sábado 8:00 AM - 6:00 PM</p>
+                    <div class="badge-custom">Disponible por WhatsApp</div>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-white-50">
+            
+            <div class="footer-bottom">
+                <p class="mb-0" style="color: #ccc;">&copy; 2024 OKINNOVATION - Fabricación & Accesorios Off-Road. Llevamos la personalización a otro nivel 4x4.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/51918286293" class="floating-whatsapp animate__animated animate__bounceIn animate__delay-4s">
+        📱
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- CARGAR MENÚ EXTERNO -->
+    <script src="assets/js/load-menu.js"></script>
+    
+    <script>
+        // Script para funcionalidades generales (sin menú)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling para enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (!targetId || targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (!targetElement) return;
+
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Animaciones al hacer scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos para animación
+            document.querySelectorAll('.service-card, .category-card').forEach(function(el) {
+                observer.observe(el);
+            });
+        });
+    </script>
+    
+</body>
+</html>
